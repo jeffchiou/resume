@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'Jost';
+  src: url('Jost-VF.woff2');
+  font-style: normal;
+}
+
+@font-face {
+	src: url('et-book-bold.woff');
+	font-family:'ET Book';
+  font-style: normal;
+}
+
+:root {
+  /* Given a typical user font size of 16px, gives us a base of 10px */
+  font-size: 62.5%; 
+  --main-bg-color: hsl(30, 100%, 99%);
+  --serif-font: 'ET Book';
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  max-width: 1200px;
+  line-height: 1.3;
+}
+
+section {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+li {
+  list-style-type: none;
+  position: relative;    /* It is required for setting position to absolute in the next rule. */
+}
+
+li::before {
+  content: '⩺'; /* ⨷ ⩺ ⏣ ⧁ ⧂ ⧃     Unicode for • character */
+  position: absolute;
+  left: -1.5rem;          /* Adjust this value so that it appears where you want. */
+  font-size: 1.5rem;      /* Adjust this value so that it appears what size you want. */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.logo__wrapper{
+  font-size: 1rem;
+  width: 275px;
+  height: max-content;
+  margin: 1rem;
+  float: left;
+}
+
+.logo {
+  font-family: "Righteous", sans-serif;
+  font-weight: 900;  
+  height: 12.8em;
+  width: 12.8em;
+  overflow: visible;
+  position: relative;
+}
+
+.logo__img {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.jeff {
+  font-size: 5.5em;
+  display: inline-block;
+  position: absolute;
+  top: 25.5%;
+  left: 88%;
+  letter-spacing: 0.1em;
+  /* Use translate trick so position is relative to center of text*/
+  transform: translateY(-50%);
+}
+
+.chiou {
+  font-size: 5.5em;
+  display: inline-block;
+  position: absolute;
+  top: 76%;
+  /* 66.7% is center of C if using transform trick */
+  left: 100%;
+  letter-spacing: 0.1em;
+  /* Use translate trick so position is relative to center of text*/
+  transform: translateY(-50%);
+}
+
+.github img{
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.contact__ui {
+  display: inline-block;
+  width: max-content;
+  height: max-content;
+  margin: 10px;
+  --aug-border: 1px;
+  padding: 20px; /* mind the gap */
+  --aug-border-bg: black;
+  --aug-t-height: 5px;
+  --aug-t-width: 60%;
+  --aug-b-height: 5px;
+  --aug-b-width: 60%;
+  --aug-r-height: 60%;
+  --aug-r-width: 5px;
+  --aug-l-height: 60%;
+  --aug-l-width: 5px;
+
+}
+
+header address {
+  text-align: center;
+}
+header address a {
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+}
+article {
+  columns: 2;
+  column-gap: 5rem;
+}
+.h2__ui {
+  --aug-border: 1px;
+  --aug-border-bg: black;
+  padding: 10px 20px 10px 0px;
+  margin: 0px 0px 1rem;
+  text-align: right;
+}
+
+h2, h3 {
+  font-family: var(--serif-font); 
+  letter-spacing: 0.1rem;
+}
+
+h3 {
+  font-family: var(--serif-font);
+}
+.h3__header {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.h3__header h3 {
+  margin: 0;
+  /* border: 1px solid black; */  
+}
+.h3__header section {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  align-items: flex-end;
+}
+
+.h3__header p {
+  color: slategray;
+  /* border: 1px solid black; */
+  text-align: right;
+  margin: 0;
+  font-size: 1em;
+}
+.h3__header p:nth-child(n+2) {
+  font-size: 0.8em;
+}
+
+.skills {
+  columns: 2
+}
+.skills ul {
+  padding-left: 2rem;
+}
+
+.skills h3 {
+  margin: 0;
+}
+
+.education p {
+  margin: 0;
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.education header + p {
+  padding-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+.education header p {
+  margin: 0;
+  padding: 0;
+}
+
+.education h4 {
+  margin: 0.5rem;
+  font-weight: 400;
+}
+
+.education ul {
+  margin: 0 0 1rem 0;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.projects h3 {
+  margin: 0;
+}
+
+.extra {
+  color: slategray;
+}
