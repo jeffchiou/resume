@@ -156,6 +156,7 @@ h3 {
 .h3__header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
   /* border: 1px solid black; */
 }
@@ -178,12 +179,13 @@ h3 {
   margin: 0;
   font-size: 1em;
 }
-.h3__header p:nth-child(n+2) {
+.h3__header p:nth-child(n+2) { /* Selects location */
   font-size: 0.8em;
 }
 
 .skills {
-  columns: 2
+  columns: 2;
+  column-width: 16rem;
 }
 .skills ul {
   padding-left: 2rem;
