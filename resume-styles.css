@@ -2,7 +2,7 @@
   font-family: 'Jost';
   src: url('Jost-VF.woff2');
   font-style: normal;
-  font-weight: normal;
+  font-weight: 350;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -37,19 +37,20 @@ section {
 
 li {
   list-style-type: none;
-  position: relative;    /* It is required for setting position to absolute in the next rule. */
+  position: relative;    /* Required for position:absolute to work. */
 }
 
 li::before {
-  content: '⩺'; /* ⨷ ⩺ ⏣ ⧁ ⧂ ⧃     Unicode for • character */
+  content: '⩺';  /* ⨷ ⩺ ⏣ ⧁ ⧂ ⧃ Alternative bullets */
   position: absolute;
-  left: -1.5rem;          /* Adjust this value so that it appears where you want. */
-  font-size: 1.5rem;      /* Adjust this value so that it appears what size you want. */
+  left: -1.5rem;          /* Bullet position */
+  font-size: 1.5rem;      /* Bullet size */
 }
 
 header {
   display: flex;
-  justify-content: space-between;  
+  justify-content: flex-end;  
+  flex-wrap: wrap;
 }
 
 .logo__wrapper{
@@ -58,6 +59,7 @@ header {
   height: max-content;
   margin: 1rem;
   float: left;
+  flex-grow: 1;
 }
 
 .logo {
@@ -120,7 +122,6 @@ header {
   --aug-r-width: 5px;
   --aug-l-height: 60%;
   --aug-l-width: 5px;
-
 }
 
 header address {
@@ -134,6 +135,7 @@ header address a {
 article {
   columns: 2;
   column-gap: 5rem;
+  column-width: 24rem; /* Allow column reflow */
 }
 .h2__ui {
   --aug-border: 1px;
