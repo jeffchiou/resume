@@ -192,9 +192,14 @@ h3 {
   columns: 2;
   column-width: 15rem;
 }
+
+.anti-break {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
 .skills ul {
   padding-left: 2rem;
-  break-inside: avoid;
 }
 
 .skills h3 {
