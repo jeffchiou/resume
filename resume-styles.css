@@ -25,8 +25,10 @@ body {
   font-size: 1.6rem;
   font-family: "Jost", sans-serif;
   font-weight: 300;
-  max-width: 1200px;
+  max-width: 120rem;
   line-height: 1.3;
+  margin: 1rem auto;
+  margin-bottom: 5rem;
 }
 
 section {
@@ -62,12 +64,6 @@ header {
   flex-grow: 1;
 }
 
-/* Centers name for thin screens */
-@media (max-width: 35rem) {
-  .logo__wrapper {
-    flex-grow: 0;
-  }
-}
 
 .logo {
   font-family: "Righteous", sans-serif;
@@ -194,10 +190,11 @@ h3 {
 
 .skills {
   columns: 2;
-  column-width: 16rem;
+  column-width: 15rem;
 }
 .skills ul {
   padding-left: 2rem;
+  break-inside: avoid;
 }
 
 .skills h3 {
@@ -238,4 +235,24 @@ h3 {
 
 .extra {
   color: slategray;
+}
+
+main {
+  margin: 0 5rem;
+}
+
+@media (max-width: 42rem) {
+  main {
+    margin: 0 1rem;
+  }
+}
+
+/* Centers name for thin screens 
+Note: since vars can't be used in media queries, manual calc is:
+new-main-lr-margin * 2 + 35rem
+*/
+@media (max-width: 37em) {
+  .logo__wrapper {
+    flex-grow: 0;
+  }
 }
