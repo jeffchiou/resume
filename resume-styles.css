@@ -49,18 +49,24 @@ li::before {
 
 header {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: center;  
   flex-wrap: wrap;
 }
 
-.logo__wrapper{
+.logo__wrapper {
   font-size: 1rem;
   width: 275px;
   height: max-content;
   margin: 1rem;
-  float: left;
   flex-grow: 1;
 }
+
+@media (max-width:35rem) { /* Centers name for thin screens */
+  .logo__wrapper {
+    flex-grow: 0;
+  }
+}
+
 
 .logo {
   font-family: "Righteous", sans-serif;
@@ -108,11 +114,14 @@ header {
 
 .contact__ui {
   display: inline-block;
+  grid-column-start: end;
+  justify-self: center;
   width: max-content;
   height: max-content;
-  margin: 10px;
+  margin: 1rem;
+  margin-left: 2rem;
   --aug-border: 1px;
-  padding: 20px; /* mind the gap */
+  padding: 2rem; /* mind the gap */
   --aug-border-bg: black;
   --aug-t-height: 5px;
   --aug-t-width: 60%;
