@@ -2,12 +2,16 @@
   font-family: 'Jost';
   src: url('Jost-VF.woff2');
   font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
 	src: url('et-book-bold.woff');
 	font-family:'ET Book';
   font-style: normal;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
