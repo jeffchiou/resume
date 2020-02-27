@@ -1,28 +1,34 @@
 @font-face {
-  font-family: 'Jost';
-  src: url('Jost-VF.woff2');
+  font-family: "Jost";
+  src: url("Jost-VF.woff2");
   font-style: normal;
+  font-weight: 350;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
-	src: url('et-book-bold.woff');
-	font-family:'ET Book';
+  src: url("et-book-bold.woff");
+  font-family: "ET Book";
   font-style: normal;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
   /* Given a typical user font size of 16px, gives us a base of 10px */
-  font-size: 62.5%; 
+  font-size: 62.5%;
   --main-bg-color: hsl(30, 100%, 99%);
-  --serif-font: 'ET Book';
+  --serif-font: "ET Book";
 }
 
 body {
   font-size: 1.6rem;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 300;
-  max-width: 1200px;
+  max-width: 120rem;
   line-height: 1.3;
+  margin: 1rem auto;
+  margin-bottom: 5rem;
 }
 
 section {
@@ -33,32 +39,35 @@ section {
 
 li {
   list-style-type: none;
-  position: relative;    /* It is required for setting position to absolute in the next rule. */
+  /* Required for position:absolute to work. */
+  position: relative;
 }
 
 li::before {
-  content: '⩺'; /* ⨷ ⩺ ⏣ ⧁ ⧂ ⧃     Unicode for • character */
+  content: "⩺"; /* ⨷ ⩺ ⏣ ⧁ ⧂ ⧃ Alternative bullets */
   position: absolute;
-  left: -1.5rem;          /* Adjust this value so that it appears where you want. */
-  font-size: 1.5rem;      /* Adjust this value so that it appears what size you want. */
+  left: -1.5rem; /* Bullet position */
+  font-size: 1.5rem; /* Bullet size */
 }
 
 header {
   display: flex;
-  justify-content: space-between;  
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.logo__wrapper{
+.logo__wrapper {
   font-size: 1rem;
-  width: 275px;
+  width: 30.3rem;
   height: max-content;
   margin: 1rem;
-  float: left;
+  flex-grow: 1;
 }
+
 
 .logo {
   font-family: "Righteous", sans-serif;
-  font-weight: 900;  
+  font-weight: 900;
   height: 12.8em;
   width: 12.8em;
   overflow: visible;
@@ -94,7 +103,7 @@ header {
   transform: translateY(-50%);
 }
 
-.github img{
+.github img {
   width: 1em;
   height: 1em;
   vertical-align: middle;
@@ -102,11 +111,14 @@ header {
 
 .contact__ui {
   display: inline-block;
+  grid-column-start: end;
+  justify-self: center;
   width: max-content;
   height: max-content;
-  margin: 10px;
+  margin: 1rem;
+  margin-left: 2rem;
   --aug-border: 1px;
-  padding: 20px; /* mind the gap */
+  padding: 2rem; /* mind the gap */
   --aug-border-bg: black;
   --aug-t-height: 5px;
   --aug-t-width: 60%;
@@ -116,7 +128,6 @@ header {
   --aug-r-width: 5px;
   --aug-l-height: 60%;
   --aug-l-width: 5px;
-
 }
 
 header address {
@@ -130,6 +141,7 @@ header address a {
 article {
   columns: 2;
   column-gap: 5rem;
+  column-width: 24rem; /* Allow column reflow */
 }
 .h2__ui {
   --aug-border: 1px;
@@ -139,8 +151,9 @@ article {
   text-align: right;
 }
 
-h2, h3 {
-  font-family: var(--serif-font); 
+h2,
+h3 {
+  font-family: var(--serif-font);
   letter-spacing: 0.1rem;
 }
 
@@ -149,35 +162,42 @@ h3 {
 }
 .h3__header {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
-  /* border: 1px solid black; */
 }
 
 .h3__header h3 {
   margin: 0;
-  /* border: 1px solid black; */  
 }
 .h3__header section {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
   align-items: flex-end;
 }
 
 .h3__header p {
   color: slategray;
-  /* border: 1px solid black; */
   text-align: right;
   margin: 0;
   font-size: 1em;
 }
-.h3__header p:nth-child(n+2) {
+
+/* Selects employment place of work */
+.h3__header p:nth-child(n + 2) {
   font-size: 0.8em;
 }
 
 .skills {
-  columns: 2
+  columns: 2;
+  column-width: 15rem;
 }
+
+.anti-break {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
 .skills ul {
   padding-left: 2rem;
 }
@@ -220,4 +240,24 @@ h3 {
 
 .extra {
   color: slategray;
+}
+
+main {
+  margin: 0 5rem;
+}
+
+@media (max-width: 42rem) {
+  main {
+    margin: 0 1rem;
+  }
+}
+
+/* Centers name for thin screens 
+Note: since vars can't be used in media queries, manual calc is:
+new-main-lr-margin * 2 + 35rem
+*/
+@media (max-width: 37em) {
+  .logo__wrapper {
+    flex-grow: 0;
+  }
 }
