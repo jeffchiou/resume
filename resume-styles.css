@@ -242,6 +242,10 @@ h3 {
   color: slategray;
 }
 
+a {
+  color: #0051AA;
+}
+
 main {
   margin: 0 5rem;
 }
