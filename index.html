@@ -4,41 +4,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width initial-scale=1" />
-  <title>Chiou Resume</title>
-  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet" />
+  <title>Jeffrey Chiou's Resume</title>
   <link rel="stylesheet" type="text/css" href="augmented.css" />
-  <link rel="stylesheet" type="text/css" href="resume-styles.css" />
+  <link rel="stylesheet" type="text/css" href="ai-resume-styles.css" />
 </head>
 
 <body>
   <main>
-    <header>
-      <div class="logo__wrapper">
-        <div class="logo">
+    <header class="main-header">
+      <div class="logo">
           <img class="logo__img" src="jc_logo_256_solid.svg" alt="JC Logo" />
-          <div class="jeff">
-            <div style="display: none">J</div>
-            effrey
-          </div>
-          <div class="chiou">
-            <div style="display: none">C</div>
-            hiou
-          </div>
-        </div>
       </div>
-      <div class="contact__ui" augmented-ui="t-clip-x b-clip-x l-clip-y r-clip-y exe">
-        <address>
-          <a href="mailto:jeffchiou@gmail.com">✉ jeffchiou@gmail.com</a><br />
-          <a href="">📞 on request</a><br />
-          <a href="https://www.jeffchiou.com">🌎 jeffchiou.com</a><br />
-          <a class="github" href="https://www.github.com/jeffchiou"><img src="github-cat.png" />
-            github.com/jeffchiou</a>
-        </address>
+      <div class="title">
+        <h1>Jeffrey Chiou</h1>
+        Data Scientist
+      </div>
+      <div class="contact">
+        <div class="contact__ui" augmented-ui="t-clip-x b-clip-x l-clip-y r-clip-y exe">
+          <address>
+            <a href="mailto:jeffchiou@gmail.com">✉ jeffchiou@gmail.com</a><br />
+            <a href="">📞 on request</a><br />
+            <a href="https://www.jeffchiou.com">🌎 jeffchiou.com</a><br />
+            <a class="github" href="https://www.github.com/jeffchiou"><img src="github-cat.png" />
+              github.com/jeffchiou</a>
+          </address>
+        </div>
       </div>
     </header>
     <article>
+
       <section>
-        <h2 class="h2__ui" augmented-ui="tl-clip br-clip exe">Employment</h2>
+        <h2 class="h2__ui" augmented-ui="tl-clip br-clip exe">Skills</h2>
+        <section class="skills">
+          <div class="anti-break">
+            <h3>AI & Machine Learning</h3>
+            <ul>
+              <li>PyTorch, Keras, TensorFlow</li>                            
+              <li>scikit-learn, pandas, numpy, tidyverse</li>
+              <li>SQL: PostgreSQL, SQLite</li>
+              <li>Neural networks, computer vision, Natural Language Processing (NLP)</li>
+              <li>Pyro, PyMC3, JAGS</li>
+              <li>Bayesian neural networks and Gaussian processes</li>
+              <li>Forecasting: Prophet</li>     
+              <li>Hyperparameter optimization, AutoML</li>
+            </ul>
+          </div>
+         
+          <div class="anti-break">
+            <h3>Tools</h3>
+            <ul>
+              <li>Python, R, JavaScript, MATLAB</li>
+              <li>Viz: Matplotlib, ggplot2, D3.js</li>
+              <li>Flask, FastAPI</li>
+              <li>DevOps: Docker, AWS</li>
+              <li>Git</li>
+            </ul>
+          </div>
+          <div class="anti-break"></div>
+            <h3>Math</h3>
+            <ul>
+              <li>Probabilistic graphical models, causal inference, and Bayesian modeling</li>
+              <li>Information theory</li>
+              <li>Probability and Statistics</li>
+            </ul>
+          </div>
+          
+        </section>
+      </section>
+
+      <section>
+        <h2 class="h2__ui" augmented-ui="tl-clip br-clip exe">Work</h2>
         <header class="h3__header">
           <h3>Artificial Intelligence Fellow</h3>
           <section>
@@ -48,13 +83,14 @@
         </header>
         <ul>
           <li>
-            Created effective machine learning models for medical diagnosis.
+            Created effective classification models for core business of medical diagnosis.
+            Compared methods including <strong>boosting</strong>, <strong>Bayesian models</strong>, and <strong>neural networks</strong>.
           </li>
           <li>
             Upheld stakeholder interests and clearly communicated technical details while working remotely in a team.
           </li>
           <li>
-            Won competitive grant to participate in this AI program.
+            Won grant by passing competitive interview process.
           </li>
         </ul>
         <header class="h3__header">
@@ -69,17 +105,18 @@
         </p>
         <ul>
           <li>
-            While working remotely, implemented cutting edge machine learning techniques in a proprietary AI stack.
+            Led development of a successful machine learning <strong>edge device</strong> prototype and shipped it to clients.
           </li>
           <li>
-            Managed and added features to both the front-end and the back-end of the customer-facing web app.
+            While working remotely, implemented and deployed cutting edge <strong>probabilistic machine learning</strong> techniques.
           </li>
           <li>
-            Updated product API and managed cloud computing services (AWS).
+            Managed and added features to both the front-end and the back-end of the customer-facing web app, including <strong>PostgreSQL database</strong>.
           </li>
           <li>
-            Led a custom machine learning edge device project and shipped it to customers.
+            Updated <strong>REST API</strong> and managed <strong>distributed cloud services (AWS</strong>).
           </li>
+
         </ul>
         <header class="h3__header">
           <h3>National Science Foundation (NSF) Graduate Fellow</h3>
@@ -95,17 +132,13 @@
         <ul>
           <li>
             Used various engineering and machine learning techniques, such as
-            dimensionality reduction, Kalman filtering, and
-            clustering, to process and analyze neural data from
+            <strong>dimensionality reduction, Kalman filtering,</strong> and
+            <strong>regression</strong>, to process and analyze neural data from
             electrode array-based BCI experiments.
           </li>
           <li>
             Spearheaded lab code refactoring effort emphasizing reuse,
             consistent style, documentation, and organization.
-          </li>
-          <li>
-            Automated setup of experiments and repetitive lab tasks using
-            Autohotkey, PowerShell, and IFTTT.
           </li>
           <li>
             Effectively communicated complex ideas through data visualization,
@@ -117,72 +150,26 @@
 
       <section class="projects">
         <h2 class="h2__ui" augmented-ui="tl-clip br-clip exe">Projects</h2>
-        <h3>CoordiScroll</h3>
+        <h3>Pinkline</h3>
         <p>
-          Open source advanced synchronized scrolling in JavaScript using a publish-subscribe architecture. Demo utilizes D3.js.
-          <a href="https://jeffchiou.github.io/coordiscroll/">jeffchiou.github.io/coordiscroll/</a>
+          Lead developer for a full-stack machine learning web application with a <strong>Flask</strong> and <strong>relational database</strong> backend.
+          Uses a <strong>data pipeline</strong> and <strong>sklearn</strong> to <strong>cluster</strong> patient locations, identifying where to send healthcare teams.
+          Collaboration with an Indiana University lab.
         </p>
-        <h3>JeffChiou.com</a></h3>
+        
+        <h3><a href="https://www.jeffchiou.com">JeffChiou.com</a></h3>
         <p>
-          Open source personal website utilizing CoordiScroll. I blog about AI, tech, neuroscience, and philosophy.
-          Created with Eleventy, styled with TailwindCSS. Previous version used Gatsby/React.
-          <a href="https://www.jeffchiou.com">www.jeffchiou.com</a>
+          Open source website and blog about AI, tech, neuroscience, and philosophy.
         </p>
 
         <h3>Genetic Algorithms on Spiking Recurrent Neural Networks</h3>
 
         <p>
-          Used genetic algorithms to induce oscillatory behavior in a
+          Used <strong>genetic algorithms</strong> to induce oscillatory behavior in a
           population of Izhikevich neurons.
         </p>
-
-        <h3>Flexible and Fast Spike Raster Plotting</h3>
-
-        <p>
-          Open source highly rated MATLAB neural spike train graphing
-          function with a demo simulation utilizing inhomogeneous Poisson
-          processes. <a
-            href="https://www.mathworks.com/matlabcentral/fileexchange/45671-flexible-and-fast-spike-raster-plotting?s_tid=prof_contriblnk">mathworks.com/matlabcentral/fileexchange/45671-flexible-and-fast-spike-raster-plotting</a>
-        </p>
       </section>
 
-      <section>
-        <h2 class="h2__ui" augmented-ui="tl-clip br-clip exe">Awards</h2>
-        <header class="h3__header">
-          <h3>NASA International Space Apps Challenge Global Nominee</h3>
-          <section>
-            <p>2016</p>
-          </section>
-        </header>
-        <p>
-          Created Dagu, an app prototype providing pastoral communities with
-          networking capabilities and information about water availability,
-          grassland, market prices, and safe routes.
-        </p>
-        <header class="h3__header">
-          <h3>NSF Graduate Research Fellowship</h3>
-          <section>
-            <p>2013</p>
-          </section>
-        </header>
-        <p>
-          Designed a brain-to-brain interface experiment in 2012 proposal,
-          predating the first paper published by another group (Pais-Vieira,
-          Lebedev, Kunicki, Wang, &amp; Nicolelis 2013). Also proposed
-          intra-brain artificial circuits.
-        </p>
-        <header class="h3__header">
-          <h3>C-SURE Fellowship</h3>
-          <section>
-            <p>2010</p>
-          </section>
-        </header>
-        <p>
-          Performed research on and wrote undergraduate thesis about the
-          neuronal control of eye movements, at Pablo Blazquez&#39;s lab at
-          Washington University in St. Louis.
-        </p>
-      </section>
       <section class="education">
         <h2 class="h2__ui" augmented-ui="tl-clip br-clip exe">Education</h2>
         <header class="h3__header">
@@ -196,19 +183,18 @@
         <ul>
           <li>
             Computational Neuroscience Methods (Pitt Math 3375) - Numerical
-            methods, neuron models
+            methods (<strong>simulation</strong>), neuron models
           </li>
           <li>
             Neural Data Analysis (CMU 86-631) - Information theory,
-            estimation, classification, signal detection theory, and
+            estimation, classification, LDA, signal detection theory, and
             continuous decoding
           </li>
           <li>
             Neural Signal Processing (CMU 18-698) - Derived and implemented
             algorithms and models from equations. Expectation-maximization,
-            PCA, factor analysis, Kalman filters, log-exp-sum, 
-            Gaussian mixture models, stochastic processes,
-            probabilistic graphical models... etc.
+            PCA, factor analysis, log-exp-sum, 
+            Gaussian mixture models, stochastic processes, etc.
           </li>
 
         </ul>
@@ -225,53 +211,31 @@
         </p>
       </section>
 
-
       <section>
-        <h2 class="h2__ui" augmented-ui="tl-clip br-clip exe">Skills</h2>
-        <section class="skills">
-          <div class="anti-break">
-            <h3>AI &amp; Machine Learning</h3>
-            <ul>
-              <li>PyTorch, Pyro, PyMC3, scikit-learn, pandas, numpy, scipy, SQL</li>              
-              <li>Techniques including Bayesian neural networks, Gaussian processes, boosting methods, transformers ...etc.</li>
-              <li>AutoML, Bayesian optimization</li>
-            </ul>
-          </div>
-          <div class="anti-break"></div>
-          <h3>Math</h3>
-          <ul>
-            <li>Probabilistic graphical models, causal inference, and Bayesian modeling</li>
-            <li>Dynamical systems and computational neuroscience</li>
-            <li>Frequentist and Bayesian statistics</li>
-            <li>Information theory</li>
-          </ul>
-          </div>
-          <div class="anti-break">
-            <h3>Development</h3>
-            <ul>
-              <li>
-                Python, R, Julia
-              </li>
-              <li>MATLAB / Octave</li>
-              <li>HTML, CSS / Sass, JS / JSX</li>
-              <li>React, TailwindCSS, GraphQL, Gatsby, Styled Components</li>
-              <li>PostgreSQL, SQLite</li>
-              <li>Flask, FastAPI, some Django</li>
-              <li>Some Haskell, C#, and Racket</li>
-              <li>Git</li>           
-            </ul>
-          </div>
-          <div class="anti-break">
-            <h3>Miscellaneous</h3>
-            <ul>
-              <li>Windows, Linux</li>
-              <li>VS Code, Vim</li>
-              <li>Docker</li> 
-              <li>AWS, Heroku + some GCP, Azure</li>
-              <li>Algorithms, FP, OOP</li>
-            </ul>
-          </div>
-        </section>
+        <h2 class="h2__ui" augmented-ui="tl-clip br-clip exe">Awards</h2>
+        <header class="h3__header">
+          <h3>NASA International Space Apps Challenge Global Nominee</h3>
+          <section>
+            <p>2016</p>
+          </section>
+        </header>
+        <p>
+          Prototyped Dagu, an app concept providing pastoral communities with
+          networking capabilities and information about water availability,
+          grassland, market prices, and safe routes.
+        </p>
+        <header class="h3__header">
+          <h3>NSF Graduate Research Fellowship</h3>
+          <section>
+            <p>2013</p>
+          </section>
+        </header>
+        <p>
+          Designed a brain-to-brain interface experiment in 2012 proposal,
+          predating the first paper published by another group (Pais-Vieira,
+          Lebedev, Kunicki, Wang, &amp; Nicolelis 2013). Also proposed
+          intra-brain artificial circuits.
+        </p>
       </section>
 
     </article>
