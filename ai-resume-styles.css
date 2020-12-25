@@ -1,19 +1,19 @@
 @font-face {
   font-family: "Open Sans";
-  src: url("OpenSans-Light.ttf");
+  src: url("OpenSans-Light.ttf") format("ttf");
   font-style: normal;  
   -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("OpenSans-SemiBold.ttf");  
+  src: url("OpenSans-SemiBold.ttf") format("ttf");  
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
-  src: url("et-book-bold.woff");
+  src: url("et-book-bold.woff") format("woff");
   font-family: "ET Book";
   font-style: normal;
   font-weight: bold;
@@ -179,6 +179,7 @@ h3 a {
 }
 
 .anti-break {
+  display: inline-block;
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
 }
